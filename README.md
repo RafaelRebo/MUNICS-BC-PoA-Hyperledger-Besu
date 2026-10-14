@@ -53,7 +53,7 @@ Si nuestro sistema cumple con los prerrequisitos anteriores podemos usar los scr
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/RafaelRebo/MUNICS-BC-PoA-Hyperledger-Besu.git
-cd quorum-test-network
+cd MUNICS-BC-PoA-Hyperledger-Besu
 
 # 2. Dar permisos de ejecución a los ficheros
 chmod u+x start.sh stop.sh clean.sh
