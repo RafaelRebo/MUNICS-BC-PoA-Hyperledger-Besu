@@ -1,0 +1,6 @@
+logs/
+*.log
+.quorumDevQuickstart.lock
+*.bak
+.DS_Store
+data/
