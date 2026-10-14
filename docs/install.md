@@ -19,7 +19,6 @@ En VirtualBox, acceder a **Configuración > Red > Adaptador 1 (conectado a NAT) 
 | **SSH** | TCP | `127.0.0.1` | `2222` | *(vacío)* | `22` | Gestión remota de la consola Ubuntu |
 | **Besu** | TCP | `127.0.0.1` | `8545` | *(vacío)* | `8545` | JSON-RPC HTTP (MetaMask, SDKs) |
 | **Chainlens** | TCP | `127.0.0.1` | `8081` | *(vacío)* | `8081` | Interfaz web de Chainlens |
-| **Blockscout** | TCP | `127.0.0.1` | `25000` | *(vacío)* | `25000` | Reservado para explorador auxiliar |
 
 ### C. Conexión SSH desde el sistema anfitrión:
 Una vez iniciada la máquina virtual, nos conectamos desde el anfitrión usando:
