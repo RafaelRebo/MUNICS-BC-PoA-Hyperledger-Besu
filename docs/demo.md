@@ -36,27 +36,10 @@ La siguiente tabla resume el comportamiento esperado:
 
 ### Fase 1. Estado Estable Inicial
 
-Antes de comenzar las pruebas de resiliencia, se comprueba que la red está operativa y que los cuatro nodos validadores participan en el consenso.
+Tras realizar el despliegue de la topología de red para realizar las comprobaciones prácticas debemos:
+1. Abrir el explorador **Chainlens** en la dirección `http://localhost:8081`
 
-1. Levantar la infraestructura, si todavía no está iniciada:
-
-   ```bash
-   docker compose up -d
-   ```
-
-2. Comprobar el estado de los contenedores:
-
-   ```bash
-   docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
-   ```
-
-   Los cuatro validadores deben encontrarse activos.
-
-3. Abrir el explorador **Chainlens** en la siguiente dirección:
-
-   `http://localhost:8081`
-
-4. Acceder a `Blockchain > Blocks` y comprobar que la altura de bloque se incrementa de forma continua, aproximadamente cada 5 segundos.
+2. Acceder a `Blockchain > Blocks` y comprobar que la altura de bloque se incrementa de forma continua, aproximadamente cada 5 segundos.
 
 ### Fase 2. Envío de una Transacción desde MetaMask
 
@@ -66,8 +49,8 @@ Una vez comprobado que la red funciona con normalidad, se realiza una transferen
 
 2. Pulsar en `Enviar`, seleccionar ETH como activo e introducir los siguientes datos:
 
-   - **Destinatario:** dirección de la cuenta Plebeyo.
-   - **Dirección:** `0x36D1446EBA1F8e36EF6Baf2175fdfd583a682D55`
+   - **Destinatario:** dirección de la cuenta Plebeyo, `0x36D1446EBA1F8e36EF6Baf2175fdfd583a682D55`.
+   - **Divisa:** Ethereum
    - **Cantidad:** 10 ETH.
 
 3. Confirmar la transacción en MetaMask.
