@@ -36,7 +36,7 @@ La siguiente tabla resume el comportamiento esperado:
 
 ### Fase 1. Estado Estable Inicial
 
-Tras realizar el despliegue de la topología de red para realizar las comprobaciones prácticas debemos:
+Tras realizar el despliegue de la topología de red para realizar las comprobaciones prácticas es necesario:
 1. Abrir el explorador **Chainlens** en la dirección `http://localhost:8081`
 
 2. Acceder a `Blockchain > Blocks` y comprobar que la altura de bloque se incrementa de forma continua, aproximadamente cada 5 segundos.
@@ -88,7 +88,7 @@ En esta fase se comprueba que la red puede continuar operando a pesar de perder 
    docker stop quorum-test-network-validator1-1
    ```
 
-2. Esperar unos instantes y comprobar en Chainlens que la red continúa generando bloques. Puede ser necesario esperar al siguiente turno de consenso o a un cambio de ronda (`Round Change`).
+2. Esperar unos instantes y comprobar en Chainlens que la red continúa generando bloques.
 
 3. Realizar una nueva transferencia desde Magnate hacia Plebeyo siguiendo el procedimiento descrito en la fase anterior.
 
