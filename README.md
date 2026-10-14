@@ -12,7 +12,7 @@ Este es un proyecto de una infraestructura blockchain desplegada sobre **Hyperle
    *Comandos para levantar la red en una máquina virtual Ubuntu Server recién instalada*
 
 2. **[Configuración detallada del entorno](./docs/config.md)**  
-   *Detalle técnico de los parámetros de Besu (`config.toml`, `.env`), mapeo de puertos, APIs JSON-RPC/WS expuestas, gestión segura de material criptográfico, código de los scripts de ciclo de vida (`start.sh`, `stop.sh`, `clean.sh`) y la metodología de la prueba de tolerancia a fallos bizantinos.*
+   *Detalle de la configuración de Besu (`config.toml`, `.env`), mapeo de puertos, APIs JSON-RPC/WS expuestas y gestión de material criptográfico*
 
 ---
 
