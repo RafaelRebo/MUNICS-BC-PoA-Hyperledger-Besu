@@ -34,6 +34,17 @@ Antes de desplegar la red, la máquina anfitriona (o máquina virtual en Virtual
   ```bash
   sudo usermod -aG docker $USER
   newgrp docker
+  ```
+
+### B. Reglas de Reenvío de Puertos 
+Además, si estamos usando Docker a través de una máquina virtual, debemos en la configuración de VirtualBox acceder a **Configuración > Red > Adaptador 1 (conectado a NAT) > Avanzadas > Reenvío de puertos** y registrar las siguientes reglas:
+
+| Nombre | Protocolo | IP Anfitrión | Puerto Anfitrión | IP Invitado | Puerto Invitado | Propósito |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **SSH** | TCP | `127.0.0.1` | `2222` | *(vacío)* | `22` | Gestión remota de la consola Ubuntu |
+| **Besu** | TCP | `127.0.0.1` | `8545` | *(vacío)* | `8545` | JSON-RPC HTTP (MetaMask, SDKs) |
+| **Chainlens** | TCP | `127.0.0.1` | `8081` | *(vacío)* | `8081` | Interfaz web de Chainlens |
+| **Blockscout** | TCP | `127.0.0.1` | `25000` | *(vacío)* | `25000` | Reservado para explorador auxiliar |
 
 Si ya se dispone del entorno instalado en [la guía de instalación](./docs/install.md), podemos usar los scripts `start.sh`, `stop.sh` y `clean.sh` para iniciar, detener y restablecer la red al bloque 0. Los scripts se deberán ejecutar desde el directorio `quorum-test-network`:
 
