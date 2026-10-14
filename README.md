@@ -13,6 +13,9 @@ Este es un proyecto de una infraestructura blockchain desplegada sobre **Hyperle
 
 2. **[Configuración detallada del entorno](./docs/config.md)**  
    *Detalle de la configuración de Besu (`config.toml`, `.env`), mapeo de puertos, APIs JSON-RPC/WS expuestas y gestión de material criptográfico*
+   
+3. **[Demostración de uso de la red Hyperledger Besu](./docs/demo.md)**  
+   *Detalle de la demostración de uso de la red, comprobando su comportamiento ante la caída de uno o varios nodos validadores, y demostrando que se adecúa al algoritmo QBFT*
 
 ---
 
