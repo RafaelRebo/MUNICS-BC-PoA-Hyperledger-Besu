@@ -1,8 +1,8 @@
 # MUNICS-BC-PoA-Hyperledger-Besu
 
-# Hyperledger Besu QBFT - Blockchain Privada PoA
+## Hyperledger Besu QBFT - Blockchain Privada PoA
 
-Este es un proyecto de una infraestructura blockchain desplegada sobre **Hyperledger Besu** utilizando el algoritmo de consenso **QBFT (Quorum Byzantine Fault Tolerance)**, basado en PoA.  Se complementa con con el explorador de bloques **Chainlens**, que nos proporciona una interfaz web para monitorizar el estado de la blockchain en todo momento.
+Este es un proyecto de una infraestructura blockchain desplegada sobre **Hyperledger Besu** utilizando el algoritmo de consenso **QBFT (Quorum Byzantine Fault Tolerance)**, basado en PoA.  Se complementa con el explorador de bloques **Chainlens**, que nos proporciona una interfaz web para monitorizar el estado de la blockchain en todo momento.
 
 > [!WARNING]
 > **Aviso:** El material criptográfico y las claves privadas incluidas en este repositorio (`genesis.json`, `config/nodes/`, `config/ethsigner/`) son ficticias y de uso exclusivo en este escenario (*mock keys* generadas por `quorum-dev-quickstart`). Por ello, no custodian activos reales. Se incluyen intencionadamente para permitir el despliegue inmediato de la red.
@@ -52,14 +52,13 @@ Además, si estamos usando Docker a través de una máquina virtual, debemos en 
 | **SSH** | TCP | `127.0.0.1` | `2222` | *(vacío)* | `22` | Gestión remota de la consola Ubuntu |
 | **Besu** | TCP | `127.0.0.1` | `8545` | *(vacío)* | `8545` | JSON-RPC HTTP (MetaMask, SDKs) |
 | **Chainlens** | TCP | `127.0.0.1` | `8081` | *(vacío)* | `8081` | Interfaz web de Chainlens |
-| **Blockscout** | TCP | `127.0.0.1` | `25000` | *(vacío)* | `25000` | Reservado para explorador auxiliar |
 
 Si nuestro sistema cumple con los prerrequisitos anteriores podemos usar los scripts `start.sh`, `stop.sh` y `clean.sh` para iniciar, detener y restablecer la red al bloque 0. Los scripts se deberán ejecutar desde el directorio `quorum-test-network`:
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/RafaelRebo/MUNICS-BC-PoA-Hyperledger-Besu.git
-cd MUNICS-BC-PoA-Hyperledger-Besu
+git clone https://github.com/RafaelRebo/MUNICS-BC-PoA-Hyperledger-Besu.git quorum-test-network
+cd quorum-test-network
 
 # 2. Dar permisos de ejecución a los ficheros
 chmod u+x start.sh stop.sh clean.sh
@@ -143,7 +142,7 @@ Al revisar el archivo `genesis.json` del repositorio:
 * **Dirección de la billetera con 90000 ETH de balance:** `0x627306090abaB3A6e1400e9345bC60c78a8BEf57`
 * **Clave privada de la cuenta:** `0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3`
 
-* **Nota**: Las claves privadas mostradas en este fragmento pueden variar en cada instalación. Debemos asegurarnos de copiar la clave privada que aparezca en nuestro fichero `genesis.json`. En este repositorio, mostramos dichas claves privadas ya que se tratan de cuentas de prueba y sus datos no son sensibles.
+* **Nota**: Las claves privadas mostradas en este fragmento pueden variar en cada instalación que hagamos desde cero. Debemos asegurarnos de copiar la clave privada que aparezca en nuestro fichero `genesis.json`. En este repositorio, mostramos dichas claves privadas ya que se tratan de cuentas de prueba y sus datos no son sensibles.
   
 #### Pasos para incorporarla en MetaMask:
 1. Abrir **MetaMask** y hacer clic en el desplegable superior de cuentas.
