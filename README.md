@@ -18,6 +18,23 @@ Este es un proyecto de una infraestructura blockchain desplegada sobre **Hyperle
 
 ## ⚡ Ejecución de la aplicación
 
+### Prerrequisitos del Sistema
+
+Antes de desplegar la red, la máquina anfitriona (o máquina virtual en VirtualBox) debe cumplir con los siguientes requisitos:
+
+* **Hardware mínimo recomendado:**
+  * **RAM:** Sobre **8 GB** asignados.
+  * **CPU:** Al menos **2 vCPUs**.
+  * **Almacenamiento:** Mínimo **30 GB** de espacio libre en disco.
+* **Software:**
+  * **Git**
+  * **Docker Engine** (v20.10 o superior) y **Docker Compose v2** (comando nativo `docker compose`).
+* **Permisos de Docker (Sin `sudo`):**  
+  El usuario actual debe pertenecer al grupo `docker` para permitir la comunicación con el socket de docker, si no ocurrirán errores de permisos:
+  ```bash
+  sudo usermod -aG docker $USER
+  newgrp docker
+
 Si ya se dispone del entorno instalado en [la guía de instalación](./docs/install.md), podemos usar los scripts `start.sh`, `stop.sh` y `clean.sh` para iniciar, detener y restablecer la red al bloque 0. Los scripts se deberán ejecutar desde el directorio `quorum-test-network`:
 
 ```bash
