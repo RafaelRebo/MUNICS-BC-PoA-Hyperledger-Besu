@@ -4,6 +4,9 @@
 
 Este es un proyecto de una infraestructura blockchain desplegada sobre **Hyperledger Besu** utilizando el algoritmo de consenso **QBFT (Quorum Byzantine Fault Tolerance)**, basado en PoA.  Se complementa con con el explorador de bloques **Chainlens**, que nos proporciona una interfaz web para monitorizar el estado de la blockchain en todo momento.
 
+> [!WARNING]
+> **Aviso:** El material criptográfico y las claves privadas incluidas en este repositorio (`genesis.json`, `config/nodes/`, `config/ethsigner/`) son ficticias y de uso exclusivo en este escenario (*mock keys* generadas por `quorum-dev-quickstart`). Por ello, no custodian activos reales. Se incluyen intencionadamente para permitir el despliegue inmediato de la red.
+
 ---
 
 ## 📚 Documentación del proyecto
