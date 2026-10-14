@@ -18,6 +18,8 @@ Este es un proyecto de una infraestructura blockchain desplegada sobre **Hyperle
 
 ## ⚡ Ejecución de la aplicación
 
+Alternativamente, se puede seguir [la guía de instalación completa](./docs/install.md) si queremos instalar el entorno sin depender de este repositorio.
+
 ### Prerrequisitos del Sistema
 
 Antes de desplegar la red, la máquina anfitriona (o máquina virtual en VirtualBox) debe cumplir con los siguientes requisitos:
@@ -36,7 +38,7 @@ Antes de desplegar la red, la máquina anfitriona (o máquina virtual en Virtual
   newgrp docker
   ```
 
-### B. Reglas de Reenvío de Puertos 
+### Reglas de Reenvío de Puertos 
 Además, si estamos usando Docker a través de una máquina virtual, debemos en la configuración de VirtualBox acceder a **Configuración > Red > Adaptador 1 (conectado a NAT) > Avanzadas > Reenvío de puertos** y registrar las siguientes reglas:
 
 | Nombre | Protocolo | IP Anfitrión | Puerto Anfitrión | IP Invitado | Puerto Invitado | Propósito |
@@ -46,7 +48,7 @@ Además, si estamos usando Docker a través de una máquina virtual, debemos en 
 | **Chainlens** | TCP | `127.0.0.1` | `8081` | *(vacío)* | `8081` | Interfaz web de Chainlens |
 | **Blockscout** | TCP | `127.0.0.1` | `25000` | *(vacío)* | `25000` | Reservado para explorador auxiliar |
 
-Si ya se dispone del entorno instalado en [la guía de instalación](./docs/install.md), podemos usar los scripts `start.sh`, `stop.sh` y `clean.sh` para iniciar, detener y restablecer la red al bloque 0. Los scripts se deberán ejecutar desde el directorio `quorum-test-network`:
+Si nuestro sistema cumple con los prerrequisitos anteriores podemos usar los scripts `start.sh`, `stop.sh` y `clean.sh` para iniciar, detener y restablecer la red al bloque 0. Los scripts se deberán ejecutar desde el directorio `quorum-test-network`:
 
 ```bash
 # 1. Clonar el repositorio
